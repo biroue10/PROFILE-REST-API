@@ -26,10 +26,6 @@ class UserProfileManager(BaseUserManager):
         user.save(using=self._db)
 
 
-
-
-
-
 class UserProfile(AbstractBaseUser, PermissionsMixin):
     """Database model for users in system"""
     email = models.EmailField(max_length=255, unique=True)
